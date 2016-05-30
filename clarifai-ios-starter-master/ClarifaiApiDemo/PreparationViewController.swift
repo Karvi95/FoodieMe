@@ -42,7 +42,11 @@ class PreparationViewController: UIViewController {
         super.viewDidLoad()
         
         RecipeName.text = recipeIDInfo.recipeName
-        Course.text = recipeIDInfo.course
+        if recipeIDInfo.course != "Unspecified" {
+            Course.text = recipeIDInfo.course
+        } else {
+            Course.text = ""
+        }
         self.ScrollView.addSubview(LabelinScrollView)
         
         // Do any additional setup after loading the view.
