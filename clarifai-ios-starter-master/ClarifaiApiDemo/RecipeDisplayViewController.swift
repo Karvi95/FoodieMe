@@ -82,7 +82,11 @@ class RecipeDisplayViewController: UIViewController, UITableViewDelegate, UITabl
         
         cell.subject.text = recipeName
         let text = returnedRecipes[indexPath.row].course
-        cell.subtitle.text = text
+        if text != "Unspecified" {
+            cell.subtitle.text = text
+        } else {
+            cell.subtitle.text = ""
+        }
         
         let url = NSURL(string:returnedRecipes[indexPath.row].imageURL)
         let data = NSData(contentsOfURL:url!)
