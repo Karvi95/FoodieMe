@@ -57,7 +57,7 @@ class PreparationViewController: UIViewController {
             //            print(self.returnedPreps[0].recipeName)
             //            print(self.returnedPreps[0].directions)
             for direction in self.returnedPreps[0].directions {
-                self.labeltext += "\(direction) /n"
+                self.labeltext += "\(direction) \n"
             }
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.LabelinScrollView.text = self.labeltext
