@@ -19,6 +19,9 @@
 		64A46E99C0E8524CDA231D6E /* libPods-ClarifaiApiDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C394D3F121AA5884C9157A /* libPods-ClarifaiApiDemoTests.a */; };
 		7442F1AD1CEE68EC003CDEC5 /* TextboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7442F1AC1CEE68EC003CDEC5 /* TextboxViewController.swift */; };
 		85A8549BF1D35E1606A5BC2C /* libPods-ClarifaiApiDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3908FCAEDB4ED9DE2B4BCF4 /* libPods-ClarifaiApiDemo.a */; };
+		9D080BDD1CFD088C00EA9A9E /* favoriteRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D080BDC1CFD088C00EA9A9E /* favoriteRecipe.swift */; };
+		9D080BE11CFD123F00EA9A9E /* FavTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D080BE01CFD123F00EA9A9E /* FavTableViewCell.swift */; };
+		9D080BE41CFD203D00EA9A9E /* favTableViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D080BE31CFD203D00EA9A9E /* favTableViewController2.swift */; };
 		9DCDE6151CF9015A00F0695E /* GetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCDE60F1CF9015A00F0695E /* GetData.swift */; };
 		9DCDE6161CF9015A00F0695E /* Preparation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCDE6101CF9015A00F0695E /* Preparation.swift */; };
 		9DCDE6171CF9015A00F0695E /* PreparationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCDE6111CF9015A00F0695E /* PreparationViewController.swift */; };
@@ -61,6 +64,9 @@
 		410E55483ED7CC82373917E8 /* Pods-ClarifaiApiDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClarifaiApiDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClarifaiApiDemoTests/Pods-ClarifaiApiDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		70BADE4B49BEF7FB8BF586B1 /* Pods-ClarifaiApiDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClarifaiApiDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClarifaiApiDemoTests/Pods-ClarifaiApiDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7442F1AC1CEE68EC003CDEC5 /* TextboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextboxViewController.swift; sourceTree = "<group>"; };
+		9D080BDC1CFD088C00EA9A9E /* favoriteRecipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = favoriteRecipe.swift; sourceTree = "<group>"; };
+		9D080BE01CFD123F00EA9A9E /* FavTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavTableViewCell.swift; sourceTree = "<group>"; };
+		9D080BE31CFD203D00EA9A9E /* favTableViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = favTableViewController2.swift; sourceTree = "<group>"; };
 		9DCDE60F1CF9015A00F0695E /* GetData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetData.swift; sourceTree = "<group>"; };
 		9DCDE6101CF9015A00F0695E /* Preparation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preparation.swift; sourceTree = "<group>"; };
 		9DCDE6111CF9015A00F0695E /* PreparationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreparationViewController.swift; sourceTree = "<group>"; };
@@ -120,8 +126,11 @@
 				9DCDE6101CF9015A00F0695E /* Preparation.swift */,
 				9DCDE6111CF9015A00F0695E /* PreparationViewController.swift */,
 				9DCDE6121CF9015A00F0695E /* Recipe.swift */,
+				9D080BE01CFD123F00EA9A9E /* FavTableViewCell.swift */,
+				9D080BDC1CFD088C00EA9A9E /* favoriteRecipe.swift */,
 				9DCDE6131CF9015A00F0695E /* RecipeDisplayViewController.swift */,
 				9DCDE6141CF9015A00F0695E /* TableViewCell.swift */,
+				9D080BE31CFD203D00EA9A9E /* favTableViewController2.swift */,
 				408D395C1BACA1FA00C5608B /* AppDelegate.h */,
 				408D395D1BACA1FA00C5608B /* AppDelegate.m */,
 				404EFC741BACA33F009D4381 /* ClarifaiClient.h */,
@@ -388,10 +397,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DCDE61A1CF9015A00F0695E /* TableViewCell.swift in Sources */,
+				9D080BE11CFD123F00EA9A9E /* FavTableViewCell.swift in Sources */,
 				4032B3FE1C57AEBA0093FA9E /* Credentials.swift in Sources */,
 				7442F1AD1CEE68EC003CDEC5 /* TextboxViewController.swift in Sources */,
+				9D080BE41CFD203D00EA9A9E /* favTableViewController2.swift in Sources */,
 				9DCDE6161CF9015A00F0695E /* Preparation.swift in Sources */,
 				9DCDE6151CF9015A00F0695E /* GetData.swift in Sources */,
+				9D080BDD1CFD088C00EA9A9E /* favoriteRecipe.swift in Sources */,
 				404EFC761BACA33F009D4381 /* ClarifaiClient.m in Sources */,
 				4088A4381BAEF1B500B1C682 /* SwiftRecognitionViewController.swift in Sources */,
 				9DCDE6171CF9015A00F0695E /* PreparationViewController.swift in Sources */,

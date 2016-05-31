@@ -93,4 +93,9 @@ class SwiftRecognitionViewController : UIViewController, UIImagePickerController
         let DestViewController: RecipeDisplayViewController = segue.destinationViewController as! RecipeDisplayViewController
         DestViewController.pictureIngredients = foodarray;
     }
+    /*
+    @IBAction func gotoFav(sender: AnyObject) {
+        let favVC = self.storyboard?.instantiateViewControllerWithIdentifier("Faves") as! FavTableViewController
+        self.presentViewController(favVC, animated: false, completion: nil)
+    }*/
 }
