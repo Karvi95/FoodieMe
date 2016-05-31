@@ -27,6 +27,8 @@ class RecipeDisplayViewController: UIViewController, UITableViewDelegate, UITabl
     var returnedRecipes : [Recipe] = [Recipe]()
     
     var pictureIngredients : [String] = []
+    
+    var favoritesArray : [Recipe] = []
        
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,6 +104,7 @@ class RecipeDisplayViewController: UIViewController, UITableViewDelegate, UITabl
         prepVC.givenRecipe = returnedRecipes[indexPath.row]
         prepVC.pictureIngredients = recipeIDInfo.pictureIngredients
         prepVC.imageURL = returnedRecipes[indexPath.row].imageURL
+        prepVC.favoritesArray = self.favoritesArray
         
         recipeIDInfo.recipeID = returnedRecipes[indexPath.row].recipeNameToIdDict[Array(returnedRecipes[indexPath.row].recipeNameToIdDict.keys)[indexPath.section]]!
         recipeIDInfo.recipeName = Array(returnedRecipes[indexPath.row].recipeNameToIdDict.keys)[indexPath.section]

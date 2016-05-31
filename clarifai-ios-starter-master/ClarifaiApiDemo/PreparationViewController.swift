@@ -22,6 +22,8 @@ class PreparationViewController: UIViewController {
     
     @IBOutlet weak var imageofFood: UIImageView!
     
+    @IBOutlet weak var favoriteButton: UIButton!
+    
     var labeltext = ""
     
     var givenRecipe: Recipe!
@@ -33,14 +35,32 @@ class PreparationViewController: UIViewController {
     
     var pictureIngredients : [String] = []
     
+    var favoritesArray : [Recipe] = []
+    
     var imageURL: String!
     
     @IBAction func FavoriteButton(sender: AnyObject) {
-        inFavorite = !inFavorite
+        /*inFavorite = !inFavorite
         if(inFavorite) {
             
+        }*/
+        // pop up alert saying that it's successfully added and ask if the user wants to see the list of favorites
+        // check if the recipe is already in the favorites
+        if (sender.titleLabel!!.text == "Favorite") {
+            favoritesArray.append(givenRecipe)
+        } else {
+            //delete it
+            print("Delete the given recipe from favorites list")
         }
+        print(favoritesArray)
     }
+    
+    @IBAction func goHome(sender: AnyObject) {
+        let homeView = storyboard?.instantiateViewControllerWithIdentifier("home") as! SwiftRecognitionViewController!
+        homeView.favoritesArray = self.favoritesArray
+        self.presentViewController(homeView, animated: true, completion: nil)
+    }
+    
     
     @IBAction func myShareButton(sender: UIButton) {
         // Hide the keyboard
@@ -138,6 +158,7 @@ class PreparationViewController: UIViewController {
         let foodarray = self.pictureIngredients
         let DestViewController: RecipeDisplayViewController = segue.destinationViewController as! RecipeDisplayViewController
         DestViewController.pictureIngredients = foodarray;
+        DestViewController.favoritesArray = self.favoritesArray
     }
 
     

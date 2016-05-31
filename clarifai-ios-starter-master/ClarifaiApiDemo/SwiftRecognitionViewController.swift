@@ -14,16 +14,9 @@ class SwiftRecognitionViewController : UIViewController, UIImagePickerController
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
 
+    var favoritesArray : [Recipe] = []
+    
     private lazy var client : ClarifaiClient = ClarifaiClient(appID: clarifaiClientID, appSecret: clarifaiClientSecret)
-
-    /*@IBAction func buttonPressed(sender: UIButton) {
-        // Show a UIImagePickerController to let the user pick an image from their library.
-        let picker = UIImagePickerController()
-        picker.sourceType = .Camera
-        picker.allowsEditing = false
-        picker.delegate = self
-        presentViewController(picker, animated: true, completion: nil)
-    }*/
 
     @IBAction func buttonPressed(sender: AnyObject) {
         // Show a UIImagePickerController to let the user pick an image from their library.
@@ -84,6 +77,7 @@ class SwiftRecognitionViewController : UIViewController, UIImagePickerController
         //let storyBoard : UIStoryboard = UIStoryboard(name:"Main", bundle:nil)
         
         let textBoxView = storyboard?.instantiateViewControllerWithIdentifier("textBoxView") as! TextboxViewController!
+        textBoxView.favoritesArray = self.favoritesArray
         self.presentViewController(textBoxView, animated: true, completion: nil)
     }
     
@@ -92,5 +86,14 @@ class SwiftRecognitionViewController : UIViewController, UIImagePickerController
         let foodarray = foodlist!.componentsSeparatedByString(" ")
         let DestViewController: RecipeDisplayViewController = segue.destinationViewController as! RecipeDisplayViewController
         DestViewController.pictureIngredients = foodarray;
+        DestViewController.favoritesArray = self.favoritesArray
     }
+    
+    @IBAction func clickFavorites(sender: AnyObject) {
+        let favView = storyboard?.instantiateViewControllerWithIdentifier("FavDisplayView") as! FavDisplayViewController!
+        favView.favoritesArray = self.favoritesArray
+        self.presentViewController(favView, animated: true, completion: nil)
+    
+    }
+    
 }

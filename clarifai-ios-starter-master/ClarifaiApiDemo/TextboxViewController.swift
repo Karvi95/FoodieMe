@@ -10,6 +10,8 @@ import UIKit
 
 class TextboxViewController: UIViewController {
     
+    var favoritesArray : [Recipe] = []
+    
     @IBOutlet weak var inputBox: UITextField!
     
     @IBAction func clickTextbox(sender: AnyObject) {
@@ -33,7 +35,8 @@ class TextboxViewController: UIViewController {
         let foodlist = self.inputBox.text
         let foodarray = foodlist!.componentsSeparatedByString(" ")
         let DestViewController: RecipeDisplayViewController = segue.destinationViewController as! RecipeDisplayViewController
-        DestViewController.pictureIngredients = foodarray;
+        DestViewController.pictureIngredients = foodarray
+        DestViewController.favoritesArray = self.favoritesArray
     }
     
 }
