@@ -20,6 +20,28 @@ class PreparationViewController: UIViewController {
     
     @IBOutlet weak var LabelinScrollView: UILabel!
     
+    @IBOutlet weak var imageofFood: UIImageView!
+    
+    var labeltext = ""
+    
+    var givenRecipe: Recipe!
+    
+    var returnedPreps : [Preparation] = [Preparation]()
+    
+    var inFavorite = false
+    var favorites : [Recipe] = [Recipe]()
+    
+    var pictureIngredients : [String] = []
+    
+    var imageURL: String!
+    
+    @IBAction func FavoriteButton(sender: AnyObject) {
+        inFavorite = !inFavorite
+        if(inFavorite) {
+            
+        }
+    }
+    
     @IBAction func myShareButton(sender: UIButton) {
         // Hide the keyboard
         RecipeName.resignFirstResponder()
@@ -45,43 +67,8 @@ class PreparationViewController: UIViewController {
         return
     }
     
-    var labeltext = ""
-    
-    var givenRecipe: Recipe!
-    
-    var returnedPreps : [Preparation] = [Preparation]()
-    
-    var pictureIngredients : [String] = []
-    
-    var favorites = [favoriteRecipe]()
-    
-    @IBAction func FavoriteButton(sender: AnyObject) {
-        //set name of recipe name to favoriteRecipe
-        //maybe check for dups
-            let myFav = favoriteRecipe(name: RecipeName.text!)
-            // Save the meals.
-            favorites.append(myFav!)
-            saveMeals()
-    }
-    
-    func saveMeals() {
-        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(favorites, toFile: favoriteRecipe.ArchiveURL.path!)
-        if !isSuccessfulSave {
-            print("Failed to save meals...")
-        }
-    }
-    
-    func loadMeals() -> [favoriteRecipe]? {
-        return NSKeyedUnarchiver.unarchiveObjectWithFile(favoriteRecipe.ArchiveURL.path!) as? [favoriteRecipe]
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //loadFavorites
-        if let savedMeals = loadMeals() {
-            favorites += savedMeals
-        }
         
         RecipeName.text = recipeIDInfo.recipeName
         if recipeIDInfo.course != "Unspecified" {
@@ -92,6 +79,14 @@ class PreparationViewController: UIViewController {
         self.ScrollView.addSubview(LabelinScrollView)
         
         // Do any additional setup after loading the view.
+        
+        let url = NSURL(string:imageURL)
+        let data = NSData(contentsOfURL:url!)
+        if data != nil {
+            imageofFood.image = UIImage(data:data!)
+        }
+        
+        
         
         self.theData.makePreparations {
             self.returnedPreps = self.theData.returnedPreps
