@@ -20,6 +20,7 @@ class PreparationViewController: UIViewController {
     
     @IBOutlet weak var LabelinScrollView: UILabel!
     
+    @IBOutlet weak var imageofFood: UIImageView!
     
     var labeltext = ""
     
@@ -31,6 +32,8 @@ class PreparationViewController: UIViewController {
     var favorites : [Recipe] = [Recipe]()
     
     var pictureIngredients : [String] = []
+    
+    var imageURL: String!
     
     @IBAction func FavoriteButton(sender: AnyObject) {
         inFavorite = !inFavorite
@@ -50,6 +53,14 @@ class PreparationViewController: UIViewController {
         self.ScrollView.addSubview(LabelinScrollView)
         
         // Do any additional setup after loading the view.
+        
+        let url = NSURL(string:imageURL)
+        let data = NSData(contentsOfURL:url!)
+        if data != nil {
+            imageofFood.image = UIImage(data:data!)
+        }
+        
+        
         
         self.theData.makePreparations {
             self.returnedPreps = self.theData.returnedPreps

@@ -101,6 +101,7 @@ class RecipeDisplayViewController: UIViewController, UITableViewDelegate, UITabl
         let prepVC = self.storyboard?.instantiateViewControllerWithIdentifier("PreparationDisplay") as! PreparationViewController
         prepVC.givenRecipe = returnedRecipes[indexPath.row]
         prepVC.pictureIngredients = recipeIDInfo.pictureIngredients
+        prepVC.imageURL = returnedRecipes[indexPath.row].imageURL
         
         recipeIDInfo.recipeID = returnedRecipes[indexPath.row].recipeNameToIdDict[Array(returnedRecipes[indexPath.row].recipeNameToIdDict.keys)[indexPath.section]]!
         recipeIDInfo.recipeName = Array(returnedRecipes[indexPath.row].recipeNameToIdDict.keys)[indexPath.section]
