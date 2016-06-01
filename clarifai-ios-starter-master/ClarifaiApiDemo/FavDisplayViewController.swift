@@ -18,7 +18,8 @@ import UIKit
 
 class FavDisplayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate{
     
-    var favoritesArray : [Recipe] = []
+    
+    var favoritesArray : [favRece] = []
     
     @IBOutlet weak var favTableView: UITableView!
     
@@ -39,8 +40,16 @@ class FavDisplayViewController: UIViewController, UITableViewDelegate, UITableVi
     
     var pictureIngredients : [String] = []*/
     
+    func loadMeals() -> [favRece]? {
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(favRece.ArchiveURL.path!) as? [favRece]
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let savedMeals = loadMeals() {
+            favoritesArray += savedMeals
+        }
         // Do any additional setup after loading the view, typically from a nib.
         
         favTableView.dataSource = self
@@ -86,31 +95,17 @@ class FavDisplayViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.favTableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TableViewCell
+
+        cell.subject.text = favoritesArray[indexPath.row].name
         
-        let dict = favoritesArray[indexPath.row].recipeNameToIdDict
-        let recipeName = Array(dict.keys)[indexPath.section]
         
-        
-        cell.subject.text = recipeName
-        let text = favoritesArray[indexPath.row].course
-        if text != "Unspecified" {
-            cell.subtitle.text = text
-        } else {
-            cell.subtitle.text = ""
-        }
-        
-        let url = NSURL(string:favoritesArray[indexPath.row].imageURL)
-        let data = NSData(contentsOfURL:url!)
-        if data != nil {
-            cell.photo.image = UIImage(data:data!)
-        }
         
         return cell
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let DestViewController: SwiftRecognitionViewController = segue.destinationViewController as! SwiftRecognitionViewController
-        DestViewController.favoritesArray = self.favoritesArray
+        //DestViewController.favoritesArray = self.favoritesArray
     }
     /*
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

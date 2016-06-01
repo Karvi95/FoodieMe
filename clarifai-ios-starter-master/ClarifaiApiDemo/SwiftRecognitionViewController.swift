@@ -50,7 +50,7 @@ class SwiftRecognitionViewController : UIViewController, UIImagePickerController
         image.drawInRect(CGRectMake(0, 0, size.width, size.height))
         let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        let foodlist : [String] = ["banana", "apple", "orange", "pepper", "avocado", "lemon", "ham", "salmon", "pork", "chicken", "egg", "milk", "tomato", "noodles", "cheddar"]
+        let foodlist : [String] = ["banana", "apple", "orange", "pepper", "avocado", "lemon", "ham", "salmon", "pork", "chicken", "egg", "milk", "tomato", "noodles", "cheddar", "broccoli", "cabbage", "cucumber", "carrot", "garlic"]
         var foodfound : [String] = []
         // Encode as a JPEG.
         let jpeg = UIImageJPEGRepresentation(scaledImage, 0.9)!
@@ -91,7 +91,7 @@ class SwiftRecognitionViewController : UIViewController, UIImagePickerController
     
     @IBAction func clickFavorites(sender: AnyObject) {
         let favView = storyboard?.instantiateViewControllerWithIdentifier("FavDisplayView") as! FavDisplayViewController!
-        favView.favoritesArray = self.favoritesArray
+        //favView.favoritesArray = self.favoritesArray
         self.presentViewController(favView, animated: true, completion: nil)
     
     }
