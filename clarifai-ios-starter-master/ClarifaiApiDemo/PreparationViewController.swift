@@ -123,7 +123,7 @@ class PreparationViewController: UIViewController, UIAlertViewDelegate {
             imageofFood.image = UIImage(data:data!)
         }
         
-        let image1 = UIImage(named: "Youtube-logo-full_color")!
+        let image1 = UIImage(named: "YouTube-logo-full_color")!
         youtubeButton.setImage(image1, forState: UIControlState.Normal)
         
         self.theData.makePreparations {
