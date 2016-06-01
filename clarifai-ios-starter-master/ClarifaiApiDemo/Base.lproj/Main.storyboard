@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -167,7 +167,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="106"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="asI-qg-3xA" id="1Gs-kS-XLs">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="105"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="105.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KX-eV-Jpo">
@@ -261,7 +261,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5WU-gk-1RU" id="qR7-Ex-gPz">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ket-wQ-cE3">
@@ -406,12 +406,20 @@
                                     <action selector="myShareButton:" destination="gCa-Gm-mSO" eventType="touchUpInside" id="Rbu-Rk-V6T"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ayb-C5-qXN">
+                                <rect key="frame" x="484" y="103" width="93" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="edx-0i-pJf"/>
+                                    <constraint firstAttribute="width" constant="93" id="rlw-j1-BkL"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xgg-Bt-wvr" firstAttribute="leading" secondItem="dcz-Fz-kdk" secondAttribute="leadingMargin" constant="30" id="2vE-ZZ-03u"/>
                             <constraint firstItem="b4w-7o-nSd" firstAttribute="top" secondItem="s3p-O3-PT2" secondAttribute="bottom" constant="8" symbolic="YES" id="53i-pb-bfr"/>
                             <constraint firstItem="s3p-O3-PT2" firstAttribute="trailing" secondItem="dcz-Fz-kdk" secondAttribute="trailingMargin" id="5PP-7c-G9D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ayb-C5-qXN" secondAttribute="trailing" constant="3" id="6O8-Wc-MmB"/>
                             <constraint firstAttribute="bottom" secondItem="UkR-fQ-gZ2" secondAttribute="bottom" constant="20" symbolic="YES" id="6ek-xS-nhN"/>
                             <constraint firstItem="99j-be-Zcj" firstAttribute="leading" secondItem="dcz-Fz-kdk" secondAttribute="leadingMargin" id="Dwh-6E-uhQ"/>
                             <constraint firstItem="b4w-7o-nSd" firstAttribute="centerX" secondItem="fQX-75-EWy" secondAttribute="centerX" id="Iyo-2Q-rvw"/>
@@ -419,6 +427,7 @@
                             <constraint firstItem="b4w-7o-nSd" firstAttribute="trailing" secondItem="UkR-fQ-gZ2" secondAttribute="trailing" id="QZe-lv-QhZ"/>
                             <constraint firstItem="xgg-Bt-wvr" firstAttribute="centerX" secondItem="b4w-7o-nSd" secondAttribute="centerX" id="Qny-J2-GWI"/>
                             <constraint firstAttribute="leading" secondItem="dcz-Fz-kdk" secondAttribute="leadingMargin" id="RbG-ju-ktJ"/>
+                            <constraint firstItem="Ayb-C5-qXN" firstAttribute="top" secondItem="s3p-O3-PT2" secondAttribute="bottom" constant="8" id="Ry7-By-bOy"/>
                             <constraint firstItem="99j-be-Zcj" firstAttribute="baseline" secondItem="4Bs-dd-UQ6" secondAttribute="baseline" id="S3g-J2-CCt"/>
                             <constraint firstItem="fQX-75-EWy" firstAttribute="top" secondItem="b4w-7o-nSd" secondAttribute="bottom" constant="9" id="U5e-pE-UiZ"/>
                             <constraint firstItem="b4w-7o-nSd" firstAttribute="leading" secondItem="dcz-Fz-kdk" secondAttribute="leadingMargin" constant="20" id="ael-JX-v7x"/>
@@ -443,6 +452,7 @@
                         <outlet property="course" destination="b4w-7o-nSd" id="i3g-AB-VG4"/>
                         <outlet property="favoriteButton" destination="s3p-O3-PT2" id="aiY-dv-RMe"/>
                         <outlet property="imageofFood" destination="fQX-75-EWy" id="zQW-tf-0YU"/>
+                        <outlet property="youtubeImageView" destination="Ayb-C5-qXN" id="hgn-6B-tXK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EUu-Fh-IYp" userLabel="First Responder" sceneMemberID="firstResponder"/>

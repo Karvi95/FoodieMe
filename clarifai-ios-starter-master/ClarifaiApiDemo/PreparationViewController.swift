@@ -38,6 +38,7 @@ class PreparationViewController: UIViewController, UIAlertViewDelegate {
     
     var imageURL: String!
     
+    @IBOutlet weak var youtubeImageView: UIImageView!
     
     @IBAction func FavoriteButton(sender: AnyObject) {
         /*inFavorite = !inFavorite
@@ -108,7 +109,7 @@ class PreparationViewController: UIViewController, UIAlertViewDelegate {
             imageofFood.image = UIImage(data:data!)
         }
         
-        
+        youtubeImageView.image = UIImage(named: "Youtube-logo-full_color")
         
         self.theData.makePreparations {
             self.returnedPreps = self.theData.returnedPreps
