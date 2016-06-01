@@ -5,6 +5,7 @@
 //
 
 import UIKit
+import Foundation
 
 /**
  * This view controller performs recognition using the Clarifai API.
@@ -82,8 +83,11 @@ class SwiftRecognitionViewController : UIViewController, UIImagePickerController
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let foodlist = self.textView.text
-        let foodarray = foodlist!.componentsSeparatedByString(" ")
+        let foodList = self.textView.text.lowercaseString
+        
+        print("SHOULD BE LOWERCASE: \(foodList)")
+        
+        let foodarray = foodList.componentsSeparatedByString(" ")
         let DestViewController: RecipeDisplayViewController = segue.destinationViewController as! RecipeDisplayViewController
         DestViewController.pictureIngredients = foodarray;
         DestViewController.favoritesArray = self.favoritesArray
