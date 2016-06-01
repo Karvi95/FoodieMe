@@ -119,7 +119,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="xmL-xW-chq"/>
                                 </constraints>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Submit">
                                     <color key="titleColor" red="0.7547131407844001" green="0.99287927150726318" blue="0.50870393001941494" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -451,6 +451,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3n6-Y2-hyl"/>
+        <segue reference="Nbw-6a-LT4"/>
     </inferredMetricsTieBreakers>
 </document>

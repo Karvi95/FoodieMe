@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PreparationViewController: UIViewController {
+class PreparationViewController: UIViewController, UIAlertViewDelegate {
 
     let theData = GetData()
     
@@ -38,6 +38,7 @@ class PreparationViewController: UIViewController {
     
     var imageURL: String!
     
+    
     @IBAction func FavoriteButton(sender: AnyObject) {
         /*inFavorite = !inFavorite
         if(inFavorite) {
@@ -51,8 +52,9 @@ class PreparationViewController: UIViewController {
             //delete it
             print("Delete the given recipe from favorites list")
         }
-        print(favoritesArray)
+        displayAlert("Added", message: "This recipe was added to your favorites list!")
     }
+    
 
     @IBAction func myShareButton(sender: UIButton) {
         // Hide the keyboard
