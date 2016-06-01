@@ -60,6 +60,12 @@ class RecipeDisplayViewController: UIViewController, UITableViewDelegate, UITabl
 //        return stringToSend
 //    }
     
+    @IBAction func goHome(sender: AnyObject) {
+        let homeView = storyboard?.instantiateViewControllerWithIdentifier("home") as! SwiftRecognitionViewController!
+        homeView.favoritesArray = self.favoritesArray
+        self.presentViewController(homeView, animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

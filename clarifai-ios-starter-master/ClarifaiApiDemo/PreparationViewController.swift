@@ -30,7 +30,6 @@ class PreparationViewController: UIViewController {
     
     var returnedPreps : [Preparation] = [Preparation]()
     
-    var inFavorite = false
     var favorites : [Recipe] = [Recipe]()
     
     var pictureIngredients : [String] = []
@@ -54,14 +53,7 @@ class PreparationViewController: UIViewController {
         }
         print(favoritesArray)
     }
-    
-    @IBAction func goHome(sender: AnyObject) {
-        let homeView = storyboard?.instantiateViewControllerWithIdentifier("home") as! SwiftRecognitionViewController!
-        homeView.favoritesArray = self.favoritesArray
-        self.presentViewController(homeView, animated: true, completion: nil)
-    }
-    
-    
+
     @IBAction func myShareButton(sender: UIButton) {
         // Hide the keyboard
         RecipeName.resignFirstResponder()
@@ -86,9 +78,17 @@ class PreparationViewController: UIViewController {
         presentViewController(alertController, animated: true, completion: nil)
         return
     }
+    /*
+    func loadMeals() -> [favoriteRecipe]? {
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(favoriteRecipe.ArchiveURL.path!) as? [favoriteRecipe]
+    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        if let savedMeals = loadMeals() {
+//            favorites += savedMeals
+//        }
         
         RecipeName.text = recipeIDInfo.recipeName
         if recipeIDInfo.course != "Unspecified" {

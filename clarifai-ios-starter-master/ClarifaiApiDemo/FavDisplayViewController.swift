@@ -112,7 +112,7 @@ class FavDisplayViewController: UIViewController, UITableViewDelegate, UITableVi
         let DestViewController: SwiftRecognitionViewController = segue.destinationViewController as! SwiftRecognitionViewController
         DestViewController.favoritesArray = self.favoritesArray
     }
-    
+    /*
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let prepVC = self.storyboard?.instantiateViewControllerWithIdentifier("PreparationDisplay") as! PreparationViewController
         prepVC.givenRecipe = favoritesArray[indexPath.row]
@@ -131,5 +131,5 @@ class FavDisplayViewController: UIViewController, UITableViewDelegate, UITableVi
         //        print("Name: \(recipeIDInfo.recipeName)")
         
         self.presentViewController(prepVC, animated: false, completion: nil)
-    }
+    }*/
 }
