@@ -153,7 +153,7 @@ class PreparationViewController: UIViewController, UIAlertViewDelegate {
 //        }
     }
     @IBAction func YoutubeButton(sender: AnyObject) {
-        var url = "https://www.youtube.com/results?search_query="
+        var url = "https://www.youtube.com/results?search_query=how+to+make+"
         let name = recipeIDInfo.recipeName
         let newString = name.stringByReplacingOccurrencesOfString(" ", withString: "+", options: NSStringCompareOptions.LiteralSearch, range: nil)
         url = url + newString
