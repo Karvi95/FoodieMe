@@ -38,7 +38,7 @@ class PreparationViewController: UIViewController, UIAlertViewDelegate {
     
     var imageURL: String!
     
-    @IBOutlet weak var youtubeImageView: UIImageView!
+    @IBOutlet weak var youtubeButton: UIButton!
     
     @IBAction func FavoriteButton(sender: AnyObject) {
         /*inFavorite = !inFavorite
@@ -109,7 +109,8 @@ class PreparationViewController: UIViewController, UIAlertViewDelegate {
             imageofFood.image = UIImage(data:data!)
         }
         
-        youtubeImageView.image = UIImage(named: "Youtube-logo-full_color")
+        let image1 = UIImage(named: "Youtube-logo-full_color")!
+        youtubeButton.setImage(image1, forState: UIControlState.Normal)
         
         self.theData.makePreparations {
             self.returnedPreps = self.theData.returnedPreps
@@ -150,6 +151,14 @@ class PreparationViewController: UIViewController, UIAlertViewDelegate {
 //            labeltext += "\(text) /n"
 //            LabelinScrollView.text = labeltext
 //        }
+    }
+    @IBAction func YoutubeButton(sender: AnyObject) {
+        var url = "https://www.youtube.com/results?search_query="
+        let name = recipeIDInfo.recipeName
+        let newString = name.stringByReplacingOccurrencesOfString(" ", withString: "+", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        url = url + newString
+        let fileUrl = NSURL(string: url)
+        UIApplication.sharedApplication().openURL(fileUrl!)
     }
 
     override func didReceiveMemoryWarning() {

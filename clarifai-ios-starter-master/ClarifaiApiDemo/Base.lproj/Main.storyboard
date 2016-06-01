@@ -406,20 +406,23 @@
                                     <action selector="myShareButton:" destination="gCa-Gm-mSO" eventType="touchUpInside" id="Rbu-Rk-V6T"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ayb-C5-qXN">
-                                <rect key="frame" x="484" y="103" width="93" height="62"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sd5-ci-Xq4">
+                                <rect key="frame" x="501" y="116" width="76" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="62" id="edx-0i-pJf"/>
-                                    <constraint firstAttribute="width" constant="93" id="rlw-j1-BkL"/>
+                                    <constraint firstAttribute="width" constant="76" id="EjE-HE-efz"/>
+                                    <constraint firstAttribute="height" constant="48" id="mTn-ir-ZSr"/>
                                 </constraints>
-                            </imageView>
+                                <state key="normal" title="Youtube"/>
+                                <connections>
+                                    <action selector="YoutubeButton:" destination="gCa-Gm-mSO" eventType="touchUpInside" id="QUm-f0-XVe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xgg-Bt-wvr" firstAttribute="leading" secondItem="dcz-Fz-kdk" secondAttribute="leadingMargin" constant="30" id="2vE-ZZ-03u"/>
                             <constraint firstItem="b4w-7o-nSd" firstAttribute="top" secondItem="s3p-O3-PT2" secondAttribute="bottom" constant="8" symbolic="YES" id="53i-pb-bfr"/>
                             <constraint firstItem="s3p-O3-PT2" firstAttribute="trailing" secondItem="dcz-Fz-kdk" secondAttribute="trailingMargin" id="5PP-7c-G9D"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ayb-C5-qXN" secondAttribute="trailing" constant="3" id="6O8-Wc-MmB"/>
                             <constraint firstAttribute="bottom" secondItem="UkR-fQ-gZ2" secondAttribute="bottom" constant="20" symbolic="YES" id="6ek-xS-nhN"/>
                             <constraint firstItem="99j-be-Zcj" firstAttribute="leading" secondItem="dcz-Fz-kdk" secondAttribute="leadingMargin" id="Dwh-6E-uhQ"/>
                             <constraint firstItem="b4w-7o-nSd" firstAttribute="centerX" secondItem="fQX-75-EWy" secondAttribute="centerX" id="Iyo-2Q-rvw"/>
@@ -427,13 +430,14 @@
                             <constraint firstItem="b4w-7o-nSd" firstAttribute="trailing" secondItem="UkR-fQ-gZ2" secondAttribute="trailing" id="QZe-lv-QhZ"/>
                             <constraint firstItem="xgg-Bt-wvr" firstAttribute="centerX" secondItem="b4w-7o-nSd" secondAttribute="centerX" id="Qny-J2-GWI"/>
                             <constraint firstAttribute="leading" secondItem="dcz-Fz-kdk" secondAttribute="leadingMargin" id="RbG-ju-ktJ"/>
-                            <constraint firstItem="Ayb-C5-qXN" firstAttribute="top" secondItem="s3p-O3-PT2" secondAttribute="bottom" constant="8" id="Ry7-By-bOy"/>
                             <constraint firstItem="99j-be-Zcj" firstAttribute="baseline" secondItem="4Bs-dd-UQ6" secondAttribute="baseline" id="S3g-J2-CCt"/>
                             <constraint firstItem="fQX-75-EWy" firstAttribute="top" secondItem="b4w-7o-nSd" secondAttribute="bottom" constant="9" id="U5e-pE-UiZ"/>
                             <constraint firstItem="b4w-7o-nSd" firstAttribute="leading" secondItem="dcz-Fz-kdk" secondAttribute="leadingMargin" constant="20" id="ael-JX-v7x"/>
                             <constraint firstItem="b4w-7o-nSd" firstAttribute="leading" secondItem="UkR-fQ-gZ2" secondAttribute="leading" id="cPE-dA-pgA"/>
                             <constraint firstItem="b4w-7o-nSd" firstAttribute="top" secondItem="xgg-Bt-wvr" secondAttribute="bottom" constant="32" id="h5j-3Z-AIa"/>
                             <constraint firstItem="UkR-fQ-gZ2" firstAttribute="top" secondItem="fQX-75-EWy" secondAttribute="bottom" constant="8" symbolic="YES" id="hsQ-Cr-ii8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Sd5-ci-Xq4" secondAttribute="trailing" constant="3" id="lk6-VX-cOw"/>
+                            <constraint firstItem="Sd5-ci-Xq4" firstAttribute="top" secondItem="s3p-O3-PT2" secondAttribute="bottom" constant="21" id="oOW-6f-EUM"/>
                             <constraint firstItem="s3p-O3-PT2" firstAttribute="top" secondItem="4Bs-dd-UQ6" secondAttribute="bottom" constant="15" id="oX7-3G-cCi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4Bs-dd-UQ6" secondAttribute="trailing" constant="3" id="tZA-gq-eUT"/>
                             <constraint firstItem="99j-be-Zcj" firstAttribute="top" secondItem="Kqi-vY-57E" secondAttribute="bottom" id="ziU-Js-SXq"/>
@@ -452,7 +456,7 @@
                         <outlet property="course" destination="b4w-7o-nSd" id="i3g-AB-VG4"/>
                         <outlet property="favoriteButton" destination="s3p-O3-PT2" id="aiY-dv-RMe"/>
                         <outlet property="imageofFood" destination="fQX-75-EWy" id="zQW-tf-0YU"/>
-                        <outlet property="youtubeImageView" destination="Ayb-C5-qXN" id="hgn-6B-tXK"/>
+                        <outlet property="youtubeButton" destination="Sd5-ci-Xq4" id="qvL-kM-kpy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EUu-Fh-IYp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -461,6 +465,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Nbw-6a-LT4"/>
+        <segue reference="3n6-Y2-hyl"/>
     </inferredMetricsTieBreakers>
 </document>
