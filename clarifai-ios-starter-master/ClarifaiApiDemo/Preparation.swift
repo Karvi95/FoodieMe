@@ -13,6 +13,9 @@ public class Preparation {
     var imageUrl: String? = nil
     public var directions : [String]
     
+    static let DocumentsDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
+    static let ArchiveURL = DocumentsDirectory.URLByAppendingPathComponent("meals")
+    
     init(recipeName : String, directions : [String]){
         self.recipeName = recipeName
         self.directions = directions

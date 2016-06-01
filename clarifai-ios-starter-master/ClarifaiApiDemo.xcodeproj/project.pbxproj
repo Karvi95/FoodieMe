@@ -27,6 +27,7 @@
 		9DCDE6191CF9015A00F0695E /* RecipeDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCDE6131CF9015A00F0695E /* RecipeDisplayViewController.swift */; };
 		9DCDE61A1CF9015A00F0695E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCDE6141CF9015A00F0695E /* TableViewCell.swift */; };
 		9DCDE6201CF9086600F0695E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DCDE61E1CF9086600F0695E /* Main.storyboard */; };
+		9DDA13961CFE73D8000D10CF /* favRece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA13951CFE73D8000D10CF /* favRece.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		9DCDE6131CF9015A00F0695E /* RecipeDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDisplayViewController.swift; sourceTree = "<group>"; };
 		9DCDE6141CF9015A00F0695E /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		9DCDE61F1CF9086600F0695E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9DDA13951CFE73D8000D10CF /* favRece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = favRece.swift; sourceTree = "<group>"; };
 		B6C394D3F121AA5884C9157A /* libPods-ClarifaiApiDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ClarifaiApiDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3908FCAEDB4ED9DE2B4BCF4 /* libPods-ClarifaiApiDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ClarifaiApiDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -120,6 +122,7 @@
 				9DCDE61E1CF9086600F0695E /* Main.storyboard */,
 				9DCDE60F1CF9015A00F0695E /* GetData.swift */,
 				9DCDE6101CF9015A00F0695E /* Preparation.swift */,
+				9DDA13951CFE73D8000D10CF /* favRece.swift */,
 				9DCDE6111CF9015A00F0695E /* PreparationViewController.swift */,
 				9DCDE6121CF9015A00F0695E /* Recipe.swift */,
 				9DCDE6131CF9015A00F0695E /* RecipeDisplayViewController.swift */,
@@ -392,6 +395,7 @@
 			files = (
 				9DCDE61A1CF9015A00F0695E /* TableViewCell.swift in Sources */,
 				4032B3FE1C57AEBA0093FA9E /* Credentials.swift in Sources */,
+				9DDA13961CFE73D8000D10CF /* favRece.swift in Sources */,
 				7442F1AD1CEE68EC003CDEC5 /* TextboxViewController.swift in Sources */,
 				9DCDE6161CF9015A00F0695E /* Preparation.swift in Sources */,
 				9DCDE6151CF9015A00F0695E /* GetData.swift in Sources */,

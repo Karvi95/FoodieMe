@@ -34,26 +34,39 @@ class PreparationViewController: UIViewController, UIAlertViewDelegate {
     
     var pictureIngredients : [String] = []
     
-    var favoritesArray : [Recipe] = []
+    var favoritesArray : [favRece] = []
     
     var imageURL: String!
     
     @IBOutlet weak var youtubeImageView: UIImageView!
     
     @IBAction func FavoriteButton(sender: AnyObject) {
-        /*inFavorite = !inFavorite
-        if(inFavorite) {
-            
-        }*/
-        // pop up alert saying that it's successfully added and ask if the user wants to see the list of favorites
-        // check if the recipe is already in the favorites
-        if (sender.titleLabel!!.text == "Favorite") {
-            favoritesArray.append(givenRecipe)
-        } else {
-            //delete it
-            print("Delete the given recipe from favorites list")
+        var checkdup = true
+        for savedFav in favoritesArray{
+            if savedFav.name == RecipeName.text!{
+                checkdup = false
+            }
         }
+        
+        if checkdup {
+            let myFav = favRece(name: RecipeName.text!/*, photourl: imageURL, subtitle: Course!.text!*/)
+            favoritesArray.append(myFav!)
+            print(myFav)
+            saveMeals()
+        }
+        
         displayAlert("Added", message: "This recipe was added to your favorites list!")
+    }
+    
+    func saveMeals() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(favoritesArray, toFile: favRece.ArchiveURL.path!)
+        if !isSuccessfulSave {
+            print("Failed to save meals...")
+        }
+    }
+    
+    func loadMeals() -> [favRece]? {
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(favRece.ArchiveURL.path!) as? [favRece]
     }
     
 
@@ -89,9 +102,10 @@ class PreparationViewController: UIViewController, UIAlertViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        if let savedMeals = loadMeals() {
-//            favorites += savedMeals
-//        }
+        if let savedMeals = loadMeals() {
+            favoritesArray += savedMeals
+        }
+        print(favoritesArray)
         
         RecipeName.text = recipeIDInfo.recipeName
         if recipeIDInfo.course != "Unspecified" {
@@ -125,9 +139,7 @@ class PreparationViewController: UIViewController, UIAlertViewDelegate {
             })
         }
         
-        print(recipeIDInfo)
         
-        print("MY RECIPES: \(self.returnedPreps.count)")
         
 //        self.RecipeName.text = self.returnedPreps[0].recipeName
 //        self.Course.text = givenRecipe.course
@@ -161,7 +173,7 @@ class PreparationViewController: UIViewController, UIAlertViewDelegate {
         let foodarray = self.pictureIngredients
         let DestViewController: RecipeDisplayViewController = segue.destinationViewController as! RecipeDisplayViewController
         DestViewController.pictureIngredients = foodarray;
-        DestViewController.favoritesArray = self.favoritesArray
+        //DestViewController.favoritesArray = self.favoritesArray
     }
 
     

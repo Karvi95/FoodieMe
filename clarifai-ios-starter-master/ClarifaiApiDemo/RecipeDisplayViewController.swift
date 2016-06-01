@@ -46,10 +46,23 @@ class RecipeDisplayViewController: UIViewController, UITableViewDelegate, UITabl
             self.returnedRecipes = self.theData.returnedRecipes
 
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                if self.returnedRecipes.isEmpty {
+                    var int: CGFloat = 30
+                    let label = UILabel(frame: CGRectMake(40, 100, 300, 21))
+                    label.text = "There were no matches!"
+                    label.textAlignment = NSTextAlignment.Left
+                    label.textColor = UIColor.blackColor()
+                    label.center = CGPointMake(182, int)
+                    int = int + 30
+                    
+                    self.tableView.addSubview(label)
+                }
+                
                 self.tableView.reloadData()
             })
         }
     }
+
     
 //    func makeString(pictureIngredients: [String]) -> String {
 //        var stringToSend = ""
@@ -62,7 +75,7 @@ class RecipeDisplayViewController: UIViewController, UITableViewDelegate, UITabl
     
     @IBAction func goHome(sender: AnyObject) {
         let homeView = storyboard?.instantiateViewControllerWithIdentifier("home") as! SwiftRecognitionViewController!
-        homeView.favoritesArray = self.favoritesArray
+        //homeView.favoritesArray = self.favoritesArray
         self.presentViewController(homeView, animated: true, completion: nil)
     }
     
@@ -110,7 +123,8 @@ class RecipeDisplayViewController: UIViewController, UITableViewDelegate, UITabl
         prepVC.givenRecipe = returnedRecipes[indexPath.row]
         prepVC.pictureIngredients = recipeIDInfo.pictureIngredients
         prepVC.imageURL = returnedRecipes[indexPath.row].imageURL
-        prepVC.favoritesArray = self.favoritesArray
+        //prepVC.favoritesArray = self.favoritesArray
+        
         
         recipeIDInfo.recipeID = returnedRecipes[indexPath.row].recipeNameToIdDict[Array(returnedRecipes[indexPath.row].recipeNameToIdDict.keys)[indexPath.section]]!
         recipeIDInfo.recipeName = Array(returnedRecipes[indexPath.row].recipeNameToIdDict.keys)[indexPath.section]
