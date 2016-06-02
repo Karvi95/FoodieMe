@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -174,7 +174,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="asI-qg-3xA" id="1Gs-kS-XLs">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="74.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KX-eV-Jpo">
@@ -259,7 +259,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5WU-gk-1RU" id="qR7-Ex-gPz">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ket-wQ-cE3">
@@ -429,6 +429,15 @@
                                     <action selector="YoutubeButton:" destination="gCa-Gm-mSO" eventType="touchUpInside" id="QUm-f0-XVe"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKo-je-cBT">
+                                <rect key="frame" x="20" y="158" width="111" height="30"/>
+                                <state key="normal" title="Add to Calendar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="calendarButton:" destination="gCa-Gm-mSO" eventType="touchUpInside" id="mEz-P5-xbI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.47843137254901963" green="0.85098039215686272" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -477,6 +486,141 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EUu-Fh-IYp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1639" y="-343"/>
+        </scene>
+        <!--Add To Calendar View Controller-->
+        <scene sceneID="lt9-h9-fIE">
+            <objects>
+                <viewController storyboardIdentifier="addToCalendarView" id="FbK-gk-fm8" customClass="AddToCalendarViewController" customModule="ClarifaiApiDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8BT-Pi-gft"/>
+                        <viewControllerLayoutGuide type="bottom" id="9UD-f0-ASh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gfi-Lz-DkU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Abm-Ff-WMk">
+                                <rect key="frame" x="70" y="135" width="460" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="vr0-Mz-e8a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="clickTextbox:" destination="FbK-gk-fm8" eventType="editingDidEnd" id="HeR-kh-m7s"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Date : dd-MM-yyyy" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wTR-i6-dL7">
+                                <rect key="frame" x="70" y="205" width="386" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="318" id="Ull-s4-yf3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ull-s4-yf3"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="clickTextbox:" destination="FbK-gk-fm8" eventType="editingDidEnd" id="VOc-VR-tZm"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Time : hh-mm" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nab-g7-Kc7">
+                                <rect key="frame" x="70" y="275" width="386" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="clickTextbox:" destination="FbK-gk-fm8" eventType="editingDidEnd" id="fuJ-om-bna"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQG-Tb-mwj">
+                                <rect key="frame" x="256" y="345" width="88" height="30"/>
+                                <state key="normal" title="Create Event"/>
+                                <connections>
+                                    <action selector="addEvent:" destination="FbK-gk-fm8" eventType="touchUpInside" id="I7P-js-301"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKJ-s4-F7t">
+                                <rect key="frame" x="486" y="205" width="44" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="ZPR-Lt-SyU"/>
+                                </constraints>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="selectDate:" destination="FbK-gk-fm8" eventType="touchUpInside" id="lzg-69-4vr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgd-Rc-hap">
+                                <rect key="frame" x="486" y="275" width="44" height="30"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="selectTime:" destination="FbK-gk-fm8" eventType="touchUpInside" id="2Nt-ji-I6h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xg-hE-QTZ">
+                                <rect key="frame" x="20" y="20" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="gCa-Gm-mSO" kind="show" id="GGC-OQ-bfJ"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2r-31-gGB">
+                                <rect key="frame" x="70" y="61" width="460" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="2KK-Fz-wuI"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="Gfi-Lz-DkU" id="RwE-iq-P5l"/>
+                                    <outlet property="delegate" destination="Gfi-Lz-DkU" id="DWo-MW-6a4"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Nab-g7-Kc7" firstAttribute="top" secondItem="zgd-Rc-hap" secondAttribute="top" id="0uQ-wW-pF0"/>
+                            <constraint firstItem="wTR-i6-dL7" firstAttribute="leading" secondItem="Nab-g7-Kc7" secondAttribute="leading" id="4l7-Ou-rdi"/>
+                            <constraint firstItem="Abm-Ff-WMk" firstAttribute="centerX" secondItem="MQG-Tb-mwj" secondAttribute="centerX" id="59T-B7-uja"/>
+                            <constraint firstItem="cKJ-s4-F7t" firstAttribute="leading" secondItem="zgd-Rc-hap" secondAttribute="leading" id="A2l-v4-1DJ"/>
+                            <constraint firstItem="MQG-Tb-mwj" firstAttribute="top" secondItem="Nab-g7-Kc7" secondAttribute="bottom" constant="40" id="FeY-xL-7Cz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Abm-Ff-WMk" secondAttribute="trailing" constant="50" id="Jtt-bI-nS7"/>
+                            <constraint firstItem="1xg-hE-QTZ" firstAttribute="leading" secondItem="Gfi-Lz-DkU" secondAttribute="leadingMargin" id="NdV-th-JjN"/>
+                            <constraint firstItem="1xg-hE-QTZ" firstAttribute="top" secondItem="8BT-Pi-gft" secondAttribute="bottom" id="NnU-V6-TIt"/>
+                            <constraint firstItem="Abm-Ff-WMk" firstAttribute="leading" secondItem="Gfi-Lz-DkU" secondAttribute="leadingMargin" constant="50" id="O1G-Ld-XrJ"/>
+                            <constraint firstItem="Nab-g7-Kc7" firstAttribute="bottom" secondItem="zgd-Rc-hap" secondAttribute="bottom" id="OQU-EB-HtO"/>
+                            <constraint firstItem="Abm-Ff-WMk" firstAttribute="leading" secondItem="wTR-i6-dL7" secondAttribute="leading" id="R0a-Yb-CJ2"/>
+                            <constraint firstItem="cKJ-s4-F7t" firstAttribute="leading" secondItem="wTR-i6-dL7" secondAttribute="trailing" constant="30" id="Xtp-Se-STf"/>
+                            <constraint firstItem="X2r-31-gGB" firstAttribute="leading" secondItem="Gfi-Lz-DkU" secondAttribute="leadingMargin" constant="50" id="Yt3-CP-0gh"/>
+                            <constraint firstItem="Nab-g7-Kc7" firstAttribute="top" secondItem="wTR-i6-dL7" secondAttribute="bottom" constant="40" id="aLJ-Fj-ixb"/>
+                            <constraint firstItem="wTR-i6-dL7" firstAttribute="bottom" secondItem="cKJ-s4-F7t" secondAttribute="bottom" id="bD5-wI-dKS"/>
+                            <constraint firstItem="wTR-i6-dL7" firstAttribute="top" secondItem="Abm-Ff-WMk" secondAttribute="bottom" constant="40" id="dQV-j7-HNq"/>
+                            <constraint firstItem="Abm-Ff-WMk" firstAttribute="top" secondItem="X2r-31-gGB" secondAttribute="bottom" constant="20" id="eUF-S6-kZb"/>
+                            <constraint firstItem="wTR-i6-dL7" firstAttribute="trailing" secondItem="Nab-g7-Kc7" secondAttribute="trailing" id="f6x-HP-MmX"/>
+                            <constraint firstItem="9UD-f0-ASh" firstAttribute="top" secondItem="zgd-Rc-hap" secondAttribute="bottom" constant="295" id="hBc-g2-ak0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="X2r-31-gGB" secondAttribute="trailing" constant="50" id="hzt-7d-O1I"/>
+                            <constraint firstItem="Abm-Ff-WMk" firstAttribute="trailing" secondItem="cKJ-s4-F7t" secondAttribute="trailing" id="mez-Bj-c66"/>
+                            <constraint firstItem="wTR-i6-dL7" firstAttribute="top" secondItem="cKJ-s4-F7t" secondAttribute="top" id="oWI-DE-QYB"/>
+                            <constraint firstItem="Abm-Ff-WMk" firstAttribute="centerX" secondItem="Gfi-Lz-DkU" secondAttribute="centerX" id="pPb-RS-CzI"/>
+                            <constraint firstItem="9UD-f0-ASh" firstAttribute="top" secondItem="MQG-Tb-mwj" secondAttribute="bottom" constant="225" id="rXv-Sx-I8q"/>
+                            <constraint firstItem="X2r-31-gGB" firstAttribute="trailing" secondItem="Abm-Ff-WMk" secondAttribute="trailing" id="uEA-4q-cbw"/>
+                            <constraint firstItem="X2r-31-gGB" firstAttribute="top" secondItem="8BT-Pi-gft" secondAttribute="bottom" constant="37" id="yLA-Zj-NkE"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="yLA-Zj-NkE"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="calendarPicker" destination="X2r-31-gGB" id="VOK-S8-j1p"/>
+                        <outlet property="dateField" destination="wTR-i6-dL7" id="Q9I-pa-223"/>
+                        <outlet property="timeField" destination="Nab-g7-Kc7" id="Krf-9B-zTr"/>
+                        <outlet property="titleField" destination="Abm-Ff-WMk" id="UHv-Hh-i90"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Erh-R1-lBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2339" y="-343"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

@@ -19,6 +19,8 @@
 		64A46E99C0E8524CDA231D6E /* libPods-ClarifaiApiDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C394D3F121AA5884C9157A /* libPods-ClarifaiApiDemoTests.a */; };
 		743EB28A1CFE467400FAE9F2 /* FavDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743EB2891CFE467400FAE9F2 /* FavDisplayViewController.swift */; };
 		7442F1AD1CEE68EC003CDEC5 /* TextboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7442F1AC1CEE68EC003CDEC5 /* TextboxViewController.swift */; };
+		746A76F71D00051500847947 /* AddToCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A76F61D00051500847947 /* AddToCalendarViewController.swift */; };
+		746A76F91D0006FA00847947 /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A76F81D0006FA00847947 /* DatePickerDialog.swift */; };
 		85A8549BF1D35E1606A5BC2C /* libPods-ClarifaiApiDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3908FCAEDB4ED9DE2B4BCF4 /* libPods-ClarifaiApiDemo.a */; };
 		9D648FAC1CFFB47C0081B12C /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D648FAB1CFFB47C0081B12C /* Images-2.xcassets */; };
 		9DCDE6151CF9015A00F0695E /* GetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCDE60F1CF9015A00F0695E /* GetData.swift */; };
@@ -65,6 +67,8 @@
 		70BADE4B49BEF7FB8BF586B1 /* Pods-ClarifaiApiDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClarifaiApiDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClarifaiApiDemoTests/Pods-ClarifaiApiDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		743EB2891CFE467400FAE9F2 /* FavDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavDisplayViewController.swift; sourceTree = "<group>"; };
 		7442F1AC1CEE68EC003CDEC5 /* TextboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextboxViewController.swift; sourceTree = "<group>"; };
+		746A76F61D00051500847947 /* AddToCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToCalendarViewController.swift; sourceTree = "<group>"; };
+		746A76F81D0006FA00847947 /* DatePickerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
 		9D648FAB1CFFB47C0081B12C /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		9DCDE60F1CF9015A00F0695E /* GetData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetData.swift; sourceTree = "<group>"; };
 		9DCDE6101CF9015A00F0695E /* Preparation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preparation.swift; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 				408D39671BACA1FA00C5608B /* LaunchScreen.xib */,
 				9D648FAB1CFFB47C0081B12C /* Images-2.xcassets */,
 				408D39581BACA1FA00C5608B /* Supporting Files */,
+				746A76F61D00051500847947 /* AddToCalendarViewController.swift */,
+				746A76F81D0006FA00847947 /* DatePickerDialog.swift */,
 			);
 			path = ClarifaiApiDemo;
 			sourceTree = "<group>";
@@ -251,7 +257,7 @@
 				TargetAttributes = {
 					408D39541BACA1FA00C5608B = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = BLLYFD5DU7;
+						DevelopmentTeam = 5NR7E8MTLW;
 					};
 					408D396D1BACA1FA00C5608B = {
 						CreatedOnToolsVersion = 6.4;
@@ -400,9 +406,11 @@
 				9DCDE61A1CF9015A00F0695E /* TableViewCell.swift in Sources */,
 				4032B3FE1C57AEBA0093FA9E /* Credentials.swift in Sources */,
 				9DDA13961CFE73D8000D10CF /* favRece.swift in Sources */,
+				746A76F71D00051500847947 /* AddToCalendarViewController.swift in Sources */,
 				7442F1AD1CEE68EC003CDEC5 /* TextboxViewController.swift in Sources */,
 				9DCDE6161CF9015A00F0695E /* Preparation.swift in Sources */,
 				9DCDE6151CF9015A00F0695E /* GetData.swift in Sources */,
+				746A76F91D0006FA00847947 /* DatePickerDialog.swift in Sources */,
 				404EFC761BACA33F009D4381 /* ClarifaiClient.m in Sources */,
 				4088A4381BAEF1B500B1C682 /* SwiftRecognitionViewController.swift in Sources */,
 				9DCDE6171CF9015A00F0695E /* PreparationViewController.swift in Sources */,
@@ -542,10 +550,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = ClarifaiApiDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = uw.edu.Clarifai2;
+				PRODUCT_BUNDLE_IDENTIFIER = uw.edu.clari;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ClarifaiApiDemo/ClarifaiApiDemo-Bridging-Header.h";
@@ -561,10 +570,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = ClarifaiApiDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = uw.edu.Clarifai2;
+				PRODUCT_BUNDLE_IDENTIFIER = uw.edu.clari;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ClarifaiApiDemo/ClarifaiApiDemo-Bridging-Header.h";
