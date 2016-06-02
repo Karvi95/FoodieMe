@@ -31,6 +31,11 @@ class SwiftRecognitionViewController : UIViewController, UIImagePickerController
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "LaunchImages.png")!)
+    }
 
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject]) {
         dismissViewControllerAnimated(true, completion: nil)
