@@ -1,5 +1,5 @@
 # FoodieMe
-<p><a href="https://docs.google.com/presentation/d/1qtizmi0zXPeyzTel-AjTaQ7xdtCwD8I-XkPi7qGj9k8/edit?usp=sharing"></a></p>
+<a href="https://docs.google.com/presentation/d/1qtizmi0zXPeyzTel-AjTaQ7xdtCwD8I-XkPi7qGj9k8/edit?usp=sharing"></a>
 <h2>What</h2>
 <p>This app allows users to take a picture of their ingredients and be presented with a list of recipes that match and/or include what they have available.</p>
     
