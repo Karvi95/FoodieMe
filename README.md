@@ -19,7 +19,7 @@
     <li><p>Share interesting recipes with your friends.</p></li>
     <img src="https://github.com/Karvi95/FoodieMe/blob/master/Screenshots/IMG_5353.PNG?raw=true" width="375px" height="667px"/>    
     <li><p>View a YouTube video of the recipe being made <sup>We cannot guarantee neither the existence nor accuracy of these videos.</sup>.</p></li>
-    <img src="https://github.com/Karvi95/FoodieMe/blob/master/Screenshots/IMG_5351.PNG?raw=true" width="375px" height="667px"/>  
+    <img src="https://github.com/Karvi95/FoodieMe/blob/master/Screenshots/IMG_5354.PNG?raw=true" width="375px" height="667px"/>  
     <li><p>Schedule your meals by adding a recipe to your calender.</p></li>
-    <img src="https://github.com/Karvi95/FoodieMe/blob/master/Screenshots/IMG_5352.PNG?raw=true" width="375px" height="667px"/>  
+    <img src="https://github.com/Karvi95/FoodieMe/blob/master/Screenshots/IMG_5355.PNG?raw=true" width="375px" height="667px"/>  
 </ol>
