@@ -24,6 +24,15 @@ class PreparationViewController: UIViewController, UIAlertViewDelegate {
     
     @IBOutlet weak var favoriteButton: UIButton!
     
+    @IBAction func calendarButton(sender: AnyObject) {
+        let addToCalendarView = storyboard?.instantiateViewControllerWithIdentifier("addToCalendarView") as! AddToCalendarViewController!
+        addToCalendarView.eventTitle = self.RecipeName.text!
+        addToCalendarView.givenRecipe = self.givenRecipe
+        addToCalendarView.pictureIngredients = self.pictureIngredients
+        addToCalendarView.imageURL = self.imageURL
+        self.presentViewController(addToCalendarView, animated: true, completion: nil)
+    
+    }
     var labeltext = ""
     
     var givenRecipe: Recipe!
