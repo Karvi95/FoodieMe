@@ -23,4 +23,4 @@
     <img src="https://github.com/Karvi95/FoodieMe/blob/master/Screenshots/IMG_5355.png?raw=true" width="375px" height="667px"/>  
 </ol>
 
-<p>"https://docs.google.com/presentation/d/1qtizmi0zXPeyzTel-AjTaQ7xdtCwD8I-XkPi7qGj9k8/edit?usp=sharing"</p>
+<p>https://docs.google.com/presentation/d/1qtizmi0zXPeyzTel-AjTaQ7xdtCwD8I-XkPi7qGj9k8/edit?usp=sharing</p>
