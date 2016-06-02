@@ -22,7 +22,7 @@ class TextboxViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        inputBox.text = "Type in items separated by a space"
+        inputBox.text = "Type in items separated by a comma"
         inputBox.textColor = UIColor.lightGrayColor()
     }
     
@@ -32,8 +32,8 @@ class TextboxViewController: UIViewController {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let foodlist = self.inputBox.text
-        let foodarray = foodlist!.componentsSeparatedByString(" ")
+        let foodlist = self.inputBox.text?.lowercaseString
+        let foodarray = foodlist!.componentsSeparatedByString(",")
         let DestViewController: RecipeDisplayViewController = segue.destinationViewController as! RecipeDisplayViewController
         DestViewController.pictureIngredients = foodarray
         DestViewController.favoritesArray = self.favoritesArray
