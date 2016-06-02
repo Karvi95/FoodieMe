@@ -12,7 +12,7 @@
     <li><p>Take a picture, get some recipes.</p></li>
     <img src="https://github.com/Karvi95/FoodieMe/blob/master/Screenshots/IMG_5349.PNG?raw=true" width="375px" height="667px"/>
     <li><p>Manually enter ingredients to get recipes.</p></li>
-    <img src="https://github.com/Karvi95/FoodieMe/blob/master/Screenshots/IMG_5348.PNG?raw=true" width="375px" height="667px"/>
+    <img src="https://github.com/Karvi95/FoodieMe/blob/master/Screenshots/IMG_5348.png?raw=true" width="375px" height="667px"/>
     <li><p>Favorite desired recipes to view them later.</p></li>
     <img src="https://github.com/Karvi95/FoodieMe/blob/master/Screenshots/IMG_5352.PNG?raw=true" width="375px" height="667px"/>
     <li><p>Share interesting recipes with your friends.</p></li>
