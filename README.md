@@ -1,5 +1,4 @@
 # FoodieMe
-<a href="https://docs.google.com/presentation/d/1qtizmi0zXPeyzTel-AjTaQ7xdtCwD8I-XkPi7qGj9k8/edit?usp=sharing"></a>
 <h2>What</h2>
 <p>This app allows users to take a picture of their ingredients and be presented with a list of recipes that match and/or include what they have available.</p>
     
@@ -23,3 +22,5 @@
     <li><p>Schedule your meals by adding a recipe to your calender.</p></li>
     <img src="https://github.com/Karvi95/FoodieMe/blob/master/Screenshots/IMG_5355.png?raw=true" width="375px" height="667px"/>  
 </ol>
+
+<p>"https://docs.google.com/presentation/d/1qtizmi0zXPeyzTel-AjTaQ7xdtCwD8I-XkPi7qGj9k8/edit?usp=sharing"</p>
