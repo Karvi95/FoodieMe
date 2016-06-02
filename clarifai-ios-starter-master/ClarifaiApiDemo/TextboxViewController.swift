@@ -32,7 +32,7 @@ class TextboxViewController: UIViewController {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let foodlist = self.inputBox.text?.lowercaseString
+        let foodlist = self.inputBox.text?.lowercaseString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
         let foodarray = foodlist!.componentsSeparatedByString(",")
         let DestViewController: RecipeDisplayViewController = segue.destinationViewController as! RecipeDisplayViewController
         DestViewController.pictureIngredients = foodarray

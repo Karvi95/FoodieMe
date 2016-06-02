@@ -201,12 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 408D39781BACA1FA00C5608B /* Build configuration list for PBXNativeTarget "ClarifaiApiDemo" */;
 			buildPhases = (
-				6B0F309093B45DA44CC62E2B /* 📦 Check Pods Manifest.lock */,
+				6B0F309093B45DA44CC62E2B /* [CP] Check Pods Manifest.lock */,
 				408D39511BACA1FA00C5608B /* Sources */,
 				408D39521BACA1FA00C5608B /* Frameworks */,
 				408D39531BACA1FA00C5608B /* Resources */,
-				11374F1E7949B08128993552 /* 📦 Copy Pods Resources */,
-				ACFB00216CB35F99884A3BAC /* 📦 Embed Pods Frameworks */,
+				11374F1E7949B08128993552 /* [CP] Copy Pods Resources */,
+				ACFB00216CB35F99884A3BAC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -221,12 +221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 408D397B1BACA1FA00C5608B /* Build configuration list for PBXNativeTarget "ClarifaiApiDemoTests" */;
 			buildPhases = (
-				3A90EF3C977BF77B4988DC65 /* 📦 Check Pods Manifest.lock */,
+				3A90EF3C977BF77B4988DC65 /* [CP] Check Pods Manifest.lock */,
 				408D396A1BACA1FA00C5608B /* Sources */,
 				408D396B1BACA1FA00C5608B /* Frameworks */,
 				408D396C1BACA1FA00C5608B /* Resources */,
-				74219622554020AB60ACDD44 /* 📦 Embed Pods Frameworks */,
-				08824DF6D58AE4B9BA67D183 /* 📦 Copy Pods Resources */,
+				74219622554020AB60ACDD44 /* [CP] Embed Pods Frameworks */,
+				08824DF6D58AE4B9BA67D183 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -300,14 +300,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		08824DF6D58AE4B9BA67D183 /* 📦 Copy Pods Resources */ = {
+		08824DF6D58AE4B9BA67D183 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,14 +315,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClarifaiApiDemoTests/Pods-ClarifaiApiDemoTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		11374F1E7949B08128993552 /* 📦 Copy Pods Resources */ = {
+		11374F1E7949B08128993552 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,14 +330,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClarifaiApiDemo/Pods-ClarifaiApiDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3A90EF3C977BF77B4988DC65 /* 📦 Check Pods Manifest.lock */ = {
+		3A90EF3C977BF77B4988DC65 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,14 +345,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		6B0F309093B45DA44CC62E2B /* 📦 Check Pods Manifest.lock */ = {
+		6B0F309093B45DA44CC62E2B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,14 +360,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		74219622554020AB60ACDD44 /* 📦 Embed Pods Frameworks */ = {
+		74219622554020AB60ACDD44 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,14 +375,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClarifaiApiDemoTests/Pods-ClarifaiApiDemoTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		ACFB00216CB35F99884A3BAC /* 📦 Embed Pods Frameworks */ = {
+		ACFB00216CB35F99884A3BAC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
