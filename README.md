@@ -7,9 +7,9 @@
 
 <h2>Features</h2>
 <ol>
-    <li><p>Take a picture, get some recipes.</p>
-    ![Alt text](/Screenshots/IMG_5349.png?raw=true "Optional Title")
-    </li>
+    <li><p>Take a picture, get some recipes.</p></li>
+    ![Alt text](/Screenshots/IMG_5349.png "Optional Title")
+    
     <li>Manually enter ingredients to get recipes.</li>
     <li>Favorite desired recipes to view them later.</li>
     <li>Share interesting recipes with your friends.</li>
