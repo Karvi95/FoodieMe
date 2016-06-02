@@ -22,5 +22,4 @@
     <li><p>Schedule your meals by adding a recipe to your calender.</p></li>
     <img src="https://github.com/Karvi95/FoodieMe/blob/master/Screenshots/IMG_5352.PNG?raw=true" width="375px" height="667px"/>  
 </ol>
-
-<a href="https://docs.google.com/presentation/d/1qtizmi0zXPeyzTel-AjTaQ7xdtCwD8I-XkPi7qGj9k8/edit?usp=sharing"></a>
+<p><a href="https://docs.google.com/presentation/d/1qtizmi0zXPeyzTel-AjTaQ7xdtCwD8I-XkPi7qGj9k8/edit?usp=sharing"></a></p>
