@@ -20,6 +20,7 @@
 		743EB28A1CFE467400FAE9F2 /* FavDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743EB2891CFE467400FAE9F2 /* FavDisplayViewController.swift */; };
 		7442F1AD1CEE68EC003CDEC5 /* TextboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7442F1AC1CEE68EC003CDEC5 /* TextboxViewController.swift */; };
 		85A8549BF1D35E1606A5BC2C /* libPods-ClarifaiApiDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3908FCAEDB4ED9DE2B4BCF4 /* libPods-ClarifaiApiDemo.a */; };
+		9D648FAC1CFFB47C0081B12C /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D648FAB1CFFB47C0081B12C /* Images-2.xcassets */; };
 		9DCDE6151CF9015A00F0695E /* GetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCDE60F1CF9015A00F0695E /* GetData.swift */; };
 		9DCDE6161CF9015A00F0695E /* Preparation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCDE6101CF9015A00F0695E /* Preparation.swift */; };
 		9DCDE6171CF9015A00F0695E /* PreparationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCDE6111CF9015A00F0695E /* PreparationViewController.swift */; };
@@ -64,6 +65,7 @@
 		70BADE4B49BEF7FB8BF586B1 /* Pods-ClarifaiApiDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClarifaiApiDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClarifaiApiDemoTests/Pods-ClarifaiApiDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		743EB2891CFE467400FAE9F2 /* FavDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavDisplayViewController.swift; sourceTree = "<group>"; };
 		7442F1AC1CEE68EC003CDEC5 /* TextboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextboxViewController.swift; sourceTree = "<group>"; };
+		9D648FAB1CFFB47C0081B12C /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		9DCDE60F1CF9015A00F0695E /* GetData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetData.swift; sourceTree = "<group>"; };
 		9DCDE6101CF9015A00F0695E /* Preparation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preparation.swift; sourceTree = "<group>"; };
 		9DCDE6111CF9015A00F0695E /* PreparationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreparationViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				743EB2891CFE467400FAE9F2 /* FavDisplayViewController.swift */,
 				408D39651BACA1FA00C5608B /* Images.xcassets */,
 				408D39671BACA1FA00C5608B /* LaunchScreen.xib */,
+				9D648FAB1CFFB47C0081B12C /* Images-2.xcassets */,
 				408D39581BACA1FA00C5608B /* Supporting Files */,
 			);
 			path = ClarifaiApiDemo;
@@ -282,6 +285,7 @@
 			files = (
 				9DCDE6201CF9086600F0695E /* Main.storyboard in Resources */,
 				408D39691BACA1FA00C5608B /* LaunchScreen.xib in Resources */,
+				9D648FAC1CFFB47C0081B12C /* Images-2.xcassets in Resources */,
 				408D39661BACA1FA00C5608B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

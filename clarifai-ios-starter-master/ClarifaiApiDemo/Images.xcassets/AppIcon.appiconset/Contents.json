@@ -11,8 +11,9 @@
       "scale" : "3x"
     },
     {
-      "idiom" : "iphone",
       "size" : "40x40",
+      "idiom" : "iphone",
+      "filename" : "Icon-Spotlight@2x.png",
       "scale" : "2x"
     },
     {
@@ -23,13 +24,13 @@
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "logo_60x60_2x.png",
+      "filename" : "Icon-App@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "logo_60x60_3x.png",
+      "filename" : "Icon-App@3x.png",
       "scale" : "3x"
     }
   ],

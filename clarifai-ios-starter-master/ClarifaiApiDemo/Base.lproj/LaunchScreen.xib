@@ -11,34 +11,23 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FoodieMe" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="20" y="143" width="441" height="167"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="167" id="FtT-P2-Iaz"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="69"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made by Lavender-P" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="OqY-Ud-tm4">
-                    <rect key="frame" x="20" y="293" width="441" height="43"/>
-                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="36"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading" translatesAutoresizingMaskIntoConstraints="NO" id="WHg-ii-h4v">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FjL-Xe-7Jr"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="OqY-Ud-tm4" secondAttribute="leading" id="UJu-Fz-egl"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="143" id="YI3-ON-fk7"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="oAB-IV-bEC"/>
-                <constraint firstAttribute="bottom" secondItem="OqY-Ud-tm4" secondAttribute="bottom" constant="144" id="uwQ-mL-qYq"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="trailing" secondItem="OqY-Ud-tm4" secondAttribute="trailing" id="zk7-HD-uyF"/>
+                <constraint firstItem="WHg-ii-h4v" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3hl-2o-yTF"/>
+                <constraint firstItem="WHg-ii-h4v" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9ji-5y-JKF"/>
+                <constraint firstAttribute="bottom" secondItem="WHg-ii-h4v" secondAttribute="bottom" id="O1l-ak-xZg"/>
+                <constraint firstAttribute="trailing" secondItem="WHg-ii-h4v" secondAttribute="trailing" id="lZT-Zb-na0"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
+    <resources>
+        <image name="loading" width="375" height="667"/>
+    </resources>
 </document>
