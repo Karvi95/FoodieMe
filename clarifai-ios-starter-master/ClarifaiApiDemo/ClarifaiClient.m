@@ -9,7 +9,7 @@
 
 #define SafeRunBlock(block, ...) block ? block(__VA_ARGS__) : nil
 
-static NSString * const kApiBaseUrl = @"https://api.clarifai.com/v1/tag/?model=food-items-v0.1";
+static NSString * const kApiBaseUrl = @"https://api.clarifai.com/v1";
 static NSString * const kErrorDomain = @"com.clarifai.ClarifaiClient";
 static NSString * const kKeyAccessToken = @"com.clarifai.ClarifaiClient.AccessToken";
 static NSString * const kKeyAppID = @"com.clarifai.ClarifaiClient.AppID";
