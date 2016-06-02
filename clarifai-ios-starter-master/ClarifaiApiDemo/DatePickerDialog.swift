@@ -141,7 +141,7 @@ class DatePickerDialog: UIView {
         self.frame = CGRectMake(0, 0, screenSize.width, screenSize.height)
         
         // This is the dialog's container; we attach the custom content and the buttons to this one
-        let dialogContainer = UIView(frame: CGRectMake((screenSize.width - dialogSize.width) / 2, (screenSize.height - dialogSize.height) / 2, dialogSize.width, dialogSize.height))
+        let dialogContainer = UIView(frame: CGRectMake((screenSize.width - dialogSize.width) / 2, (screenSize.height - dialogSize.height) / 2 - 50, dialogSize.width, dialogSize.height))
         
         // First, we style the dialog to match the iOS8 UIAlertView >>>
         let gradient: CAGradientLayer = CAGradientLayer(layer: self.layer)
@@ -201,6 +201,7 @@ class DatePickerDialog: UIView {
         self.cancelButton.setTitleColor(UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.5), forState: UIControlState.Highlighted)
         self.cancelButton.titleLabel!.font = UIFont.boldSystemFontOfSize(14)
         self.cancelButton.layer.cornerRadius = kDatePickerDialogCornerRadius
+        self.cancelButton.addTarget(self, action: "closeTapped:", forControlEvents: UIControlEvents.TouchUpInside)
         container.addSubview(self.cancelButton)
         
         self.doneButton = UIButton(type: UIButtonType.Custom) as UIButton
@@ -224,6 +225,10 @@ class DatePickerDialog: UIView {
             self.callback?(date: self.datePicker.date)
         }
         
+        close()
+    }
+    
+    func closeTapped(sender: UIButton!) {
         close()
     }
     

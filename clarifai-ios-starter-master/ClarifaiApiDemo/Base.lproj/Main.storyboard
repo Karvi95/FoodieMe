@@ -506,9 +506,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="clickTextbox:" destination="FbK-gk-fm8" eventType="editingDidEnd" id="HeR-kh-m7s"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Date : dd-MM-yyyy" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wTR-i6-dL7">
                                 <rect key="frame" x="70" y="205" width="386" height="30"/>
@@ -522,17 +519,11 @@
                                         <exclude reference="Ull-s4-yf3"/>
                                     </mask>
                                 </variation>
-                                <connections>
-                                    <action selector="clickTextbox:" destination="FbK-gk-fm8" eventType="editingDidEnd" id="VOc-VR-tZm"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Time : hh-mm" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nab-g7-Kc7">
                                 <rect key="frame" x="70" y="275" width="386" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="clickTextbox:" destination="FbK-gk-fm8" eventType="editingDidEnd" id="fuJ-om-bna"/>
-                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQG-Tb-mwj">
                                 <rect key="frame" x="256" y="345" width="88" height="30"/>

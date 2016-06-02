@@ -12,16 +12,17 @@ import EventKit
 
 class AddToCalendarViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    //For segueing back to PrepVC
     var givenRecipe: Recipe!
     var pictureIngredients : [String] = []
     var imageURL: String!
     
+    // Used to create an event
     var eventTitle : String = ""
     var dateString : String = ""
     var timeString : String = ""
-    var calendars : [String] = []
-    var calendarRow : Int = 0
-    //var calendars : [EKCalendar] = EKEventStore.calendarsForEntityType(.Event)[0]
+    var calendars : [String] = []   //Names of retrieved calendars
+    var calendarRow : Int = 0       //selected row index
     
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var dateField: UITextField!
@@ -31,15 +32,19 @@ class AddToCalendarViewController: UIViewController, UIPickerViewDelegate, UIPic
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Pre-filled text fields for title, date, and time
+        //Date and time text fields are disabled and can be changed only through select button
         titleField.text = eventTitle
         dateField.textColor = UIColor.lightGrayColor()
         dateField.userInteractionEnabled = false
         timeField.textColor = UIColor.lightGrayColor()
         timeField.userInteractionEnabled = false
         
+        // For calendars pickerview
         self.calendarPicker.dataSource = self
         self.calendarPicker.delegate = self
         
+        // Request Access to the calendar on the device and retrieve names of the calendars
         let eventStore = EKEventStore()
         var event: EKEvent = EKEvent(eventStore: eventStore)
         // 2
@@ -70,37 +75,29 @@ class AddToCalendarViewController: UIViewController, UIPickerViewDelegate, UIPic
         default:
             print("Case Default")
         }
-        
-        /*let store = EKEventStore()
-        let calendars = store.calendarsForEntityType(.Event)
-            as! [EKCalendar]
-        for one in calendars {
-            self.calendars.append(one.title)
-        }*/
-        
     }
     
+    //number of columns to show in calendar pickerview
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
     
+    //number of rows to show in calendar pickerview
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return calendars.count;
     }
     
+    //The titles of each row in calendar pickerview
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         return calendars[row]
     }
     
+    //When the calendar is selected, updates the index of the row
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.calendarRow = row
     }
     
-    @IBAction func clickTextbox(sender: UITextField) {
-        sender.text = nil
-        sender.textColor = UIColor.blackColor()
-    }
-    
+    // Pulls up DatePickerDialog to select the Date
     @IBAction func selectDate(sender: AnyObject) {
         DatePickerDialog().show("Select Date", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", datePickerMode: .Date) {
             (date) -> Void in
@@ -112,6 +109,7 @@ class AddToCalendarViewController: UIViewController, UIPickerViewDelegate, UIPic
         }
     }
     
+    // Pulls up DatePickerDialog to select the time
     @IBAction func selectTime(sender: AnyObject) {
         DatePickerDialog().show("Select Start Time", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", datePickerMode: .Time) {
             (date) -> Void in
@@ -123,9 +121,17 @@ class AddToCalendarViewController: UIViewController, UIPickerViewDelegate, UIPic
         }
     }
     
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: "Settings", message: "\(message)", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+    }
     
+    //
     @IBAction func addEvent(sender: AnyObject) {
-        guard (dateField.textColor != UIColor.lightGrayColor() || timeField.textColor != UIColor.lightGrayColor()) else {
+        //If not both of date and time are selected, it does not add an event
+        guard (dateField.textColor != UIColor.lightGrayColor() && timeField.textColor != UIColor.lightGrayColor()) else {
             showAlert("please specify date and time")
             return
         }
@@ -166,14 +172,14 @@ class AddToCalendarViewController: UIViewController, UIPickerViewDelegate, UIPic
         //for calendar in calendars {
             // 2
             //if calendar.title == "ioscreator" {
-                // 3
+        
         let calendar = calendars[calendarRow]
-                let dateFormatter = NSDateFormatter()
-                dateFormatter.dateFormat = "dd-MM-yyyy h:mm a"
-                let dateAsString = "\(dateString) \(timeString)"
-                let startDate = dateFormatter.dateFromString(dateAsString)!
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy h:mm a"
+        let dateAsString = "\(dateString) \(timeString)"
+        let startDate = dateFormatter.dateFromString(dateAsString)!
                 
-                let endDate = startDate.dateByAddingTimeInterval(1 * 60 * 60)
+        let endDate = startDate.dateByAddingTimeInterval(1 * 60 * 60)
                 
  
                 // 4
@@ -212,13 +218,6 @@ class AddToCalendarViewController: UIViewController, UIPickerViewDelegate, UIPic
         DestViewController.givenRecipe = self.givenRecipe
         DestViewController.pictureIngredients = self.pictureIngredients
         DestViewController.imageURL = self.imageURL
-    }
-    
-    func showAlert(message: String) {
-        let alert = UIAlertController(title: "Settings", message: "\(message)", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
-
     }
     
     
