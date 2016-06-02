@@ -8,7 +8,7 @@
 <h2>Features</h2>
 <ol>
     <li><p>Take a picture, get some recipes.</p></li>
-    <img src="https://github.com/Karvi95/FoodieMe/blob/master/Screenshots/IMG_5347.PNG?raw=true" />
+    <img src="https://github.com/Karvi95/FoodieMe/blob/master/Screenshots/IMG_5347.PNG?raw=true"/>
     
     <li>Manually enter ingredients to get recipes.</li>
     <li>Favorite desired recipes to view them later.</li>
