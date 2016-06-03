@@ -257,7 +257,7 @@
 				TargetAttributes = {
 					408D39541BACA1FA00C5608B = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 5NR7E8MTLW;
+						DevelopmentTeam = BLLYFD5DU7;
 					};
 					408D396D1BACA1FA00C5608B = {
 						CreatedOnToolsVersion = 6.4;
@@ -553,7 +553,7 @@
 				INFOPLIST_FILE = ClarifaiApiDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = uw.edu.Clarifai23;
+				PRODUCT_BUNDLE_IDENTIFIER = uw.edu.Clarifai234;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ClarifaiApiDemo/ClarifaiApiDemo-Bridging-Header.h";
@@ -572,7 +572,7 @@
 				INFOPLIST_FILE = ClarifaiApiDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = uw.edu.Clarifai23;
+				PRODUCT_BUNDLE_IDENTIFIER = uw.edu.Clarifai234;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ClarifaiApiDemo/ClarifaiApiDemo-Bridging-Header.h";

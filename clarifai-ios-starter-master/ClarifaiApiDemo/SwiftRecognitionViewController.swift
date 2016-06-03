@@ -73,7 +73,7 @@ class SwiftRecognitionViewController : UIViewController, UIImagePickerController
                         foodfound.append(n)
                     }
                 }
-                self.textView.text = foodfound.joinWithSeparator(", ")
+                self.textView.text = foodfound.joinWithSeparator(",")
             }
             self.cameraButton.enabled = true
         }
@@ -92,7 +92,7 @@ class SwiftRecognitionViewController : UIViewController, UIImagePickerController
         
         print("SHOULD BE LOWERCASE: \(foodList)")
         
-        let foodarray = foodList.componentsSeparatedByString(" ")
+        let foodarray = foodList.componentsSeparatedByString(",")
         let DestViewController: RecipeDisplayViewController = segue.destinationViewController as! RecipeDisplayViewController
         DestViewController.pictureIngredients = foodarray;
         DestViewController.favoritesArray = self.favoritesArray
